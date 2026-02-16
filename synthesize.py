@@ -9,7 +9,7 @@ with open('speech.txt', 'r') as file:
 
     response = polly.synthesize_speech(
         Engine ="generative",
-        OutputFormat=": "mp3",
+        OutputFormat="mp3",
         "Text": text,
         "VoiceId": "Stephen"
     )
