@@ -7,12 +7,12 @@ with open('speech.txt', 'r') as file:
 
     polly = boto3.client('polly')
 
-    response = polly.synthesize_speech( 
-        Engine="generative", 
-        OutputFormat="mp3", 
-        Text=text, 
-        VoiceId="Stephen" )
-     
+   response = polly.synthesize_speech(
+    Engine="generative",
+    OutputFormat="mp3",
+    Text=text,
+    VoiceId="Stephen"
+)
     
 
 
