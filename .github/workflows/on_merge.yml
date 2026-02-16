@@ -11,7 +11,7 @@ jobs:
       S3_Path: ${{ secrets.S3_PATH_PROD }}  
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure AWS credentials
@@ -25,4 +25,4 @@ jobs:
         run: |
           pip install boto3 --upgrade
           python synthesize.py
-          aws s3 cp example.mp3 s3://$S3_B0UCKET/$S3_Path
+          aws s3 cp example.mp3 s3://$S3_BUCKET_Name/$S3_Path
