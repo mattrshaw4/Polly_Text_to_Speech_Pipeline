@@ -7,8 +7,9 @@ jobs:
   run_polly:
     runs-on: ubuntu-latest
     env:
+      env:  
       S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
-      S3_Path: prod  
+      S3_Path: prod
 
     steps:
       - name: Checkout code
