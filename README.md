@@ -1,3 +1,3 @@
 # Polly_Text_to_Speech_Pipeline
 AWS
-GitHub actions
+GitHub actions, Automation
