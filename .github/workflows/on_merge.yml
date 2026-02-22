@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
-      S3_Path: ${{ secrets.S3_PATH_PROD }}  
+      S3_Path: prod  
 
     steps:
       - name: Checkout code
@@ -25,4 +25,4 @@ jobs:
         run: |
           pip install boto3 --upgrade
           python synthesize.py
-          aws s3 cp example.mp3 s3://text-to-speech-bucket-luit-2026/$S3_Path
+          aws s3 cp example.mp3 s3://text-to-speech-bucket-luit-2026/$S3_Path/example.mp3
